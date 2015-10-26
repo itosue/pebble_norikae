@@ -16,8 +16,6 @@ var mm=today.getMinutes();
 mm=mm<10?'0'+mm:''+mm;
 var m1=mm[0];
 var m2=mm[1];
-var ohh=hh;
-var omm=mm;
 
 //URLを作成して実行→結果からデータ取り出し
 var url = 'http://www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1='+utf8strFromSta+'&eki2='+utf8strToSta+'&eki3=&via_on=1&Dym='+y+m+'&Ddd='+d+'&Dhh='+hh+'&Dmn1='+m1+'&Dmn2='+m2+'&Cway=0&Cfp=1&C7=1&C2=0&C3=0&C1=0&C4=0&C6=2&S.x=44&S.y=9&S=%E6%A4%9C%E7%B4%A2&Cmap1=&rf=nr&pg=0&eok1=&eok2=&eok3=&Csg=1';
@@ -26,7 +24,7 @@ ajax({ url: url }, function(data){
 	j=j.replace(/\d\d\/\d\d/g,'');
 	j=j.replace(/\D/ig,'');
 
-	simply.subtitle(j[0]+j[1]+':'+j[2]+j[3]+'-'+j[4]+j[5]+':'+j[6]+j[7]);
+	simply.subtitle('\n'+j[0]+j[1]+':'+j[2]+j[3]+'-'+j[4]+j[5]+':'+j[6]+j[7]);
 
 	//以下同様に次の列車を検索
 	var ndate=new Date(y,m-1,d,j[0]+j[1],j[2]+j[3]);
@@ -48,6 +46,6 @@ ajax({ url: url }, function(data){
 		j=j.replace(/\d\d\/\d\d/g,'');
 		j=j.replace(/\D/ig,'');
 
-		simply.body(ohh+':'+omm+'\n\nnext\n'+j[0]+j[1]+':'+j[2]+j[3]+'-'+j[4]+j[5]+':'+j[6]+j[7]);
+		simply.body('\nnext\n'+j[0]+j[1]+':'+j[2]+j[3]+'-'+j[4]+j[5]+':'+j[6]+j[7]);
 	});
 });
