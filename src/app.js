@@ -23,7 +23,7 @@ ajax({ url: url }, function(data){
 	var j = data.match(/<td>(.*?)<\/td>/)[1];
 	j=j.replace(/\d\d\/\d\d/g,'');
 	j=j.replace(/\D/ig,'');
-
+	simply.title(''); //タイムアウトした時にsimply.jsのデフォルト文字列が出るのを上書き
 	simply.subtitle('\n'+j[0]+j[1]+':'+j[2]+j[3]+'-'+j[4]+j[5]+':'+j[6]+j[7]);
 
 	//以下同様に次の列車を検索
