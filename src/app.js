@@ -1,7 +1,7 @@
 //発駅と着駅を設定してURLエンコード
 //駅名はjorudanの乗換案内で検索した時に補完候補で出てくる名前で入力してください
 var strFromSta="高槻";	//発駅
-var strToSta="千早";		//着駅
+var strToSta="千早";	//着駅
 var utf8strFromSta = encodeURIComponent(strFromSta);
 var utf8strToSta = encodeURIComponent(strToSta);
 
