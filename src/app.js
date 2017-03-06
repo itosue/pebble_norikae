@@ -20,8 +20,8 @@ var m2=mm[1];
 //URLを作成して実行→結果からデータ取り出し
 var url = 'http://www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1='+utf8strFromSta+'&eki2='+utf8strToSta+'&eki3=&via_on=1&Dym='+y+m+'&Ddd='+d+'&Dhh='+hh+'&Dmn1='+m1+'&Dmn2='+m2+'&Cway=0&Cfp=1&C7=1&C2=0&C3=0&C1=0&C4=0&C6=2&S.x=44&S.y=9&S=%E6%A4%9C%E7%B4%A2&Cmap1=&rf=nr&pg=0&eok1=&eok2=&eok3=&Csg=1';
 ajax({ url: url }, function(data){
-	var j = data.match(/<td>(.*?)<\/td>/)[1];
-	j=j.replace(/\d\d\/\d\d/g,'');
+	var j = data.match(/<div class="_time">(.*?)<\/div>/)[1];
+	j=j.replace(/\d+\/\d+/g,'');
 	j=j.replace(/\D/ig,'');
 	simply.title(''); //タイムアウトした時にsimply.jsのデフォルト文字列が出るのを上書き
 	simply.subtitle('\n'+j[0]+j[1]+':'+j[2]+j[3]+'-'+j[4]+j[5]+':'+j[6]+j[7]);
@@ -42,8 +42,8 @@ ajax({ url: url }, function(data){
 
 	var nurl = 'http://www.jorudan.co.jp/norikae/cgi/nori.cgi?eki1='+utf8strFromSta+'&eki2='+utf8strToSta+'&eki3=&via_on=1&Dym='+ny+nm+'&Ddd='+nd+'&Dhh='+nhh+'&Dmn1='+nm1+'&Dmn2='+nm2+'&Cway=0&Cfp=1&C7=1&C2=0&C3=0&C1=0&C4=0&C6=2&S.x=44&S.y=9&S=%E6%A4%9C%E7%B4%A2&Cmap1=&rf=nr&pg=0&eok1=&eok2=&eok3=&Csg=1';
 	ajax({ url: nurl }, function(data){ 
-		var j = data.match(/<td>(.*?)<\/td>/)[1];
-		j=j.replace(/\d\d\/\d\d/g,'');
+		var j = data.match(/<div class="_time">(.*?)<\/div>/)[1];
+		j=j.replace(/\d+\/\d+/g,'');
 		j=j.replace(/\D/ig,'');
 
 		simply.body('\nnext\n'+j[0]+j[1]+':'+j[2]+j[3]+'-'+j[4]+j[5]+':'+j[6]+j[7]);
