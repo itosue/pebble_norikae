@@ -4,33 +4,50 @@
         ""
     ],
     "companyName": "itosue",
-    "longName": "Syokuba",
-    "projectType": "simplyjs",
+    "longName": "norikae3",
+    "projectType": "pebblejs",
     "resources": {
         "media": [
             {
                 "file": "images/menu_icon.png",
-                "menuIcon": true,
                 "name": "IMAGE_MENU_ICON",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/logo_splash.png",
                 "name": "IMAGE_LOGO_SPLASH",
-                "type": "png"
+                "type": "bitmap"
+            },
+            {
+                "file": "images/tile_splash.png",
+                "name": "IMAGE_TILE_SPLASH",
+                "type": "bitmap"
             },
             {
                 "file": "fonts/UbuntuMono-Regular.ttf",
                 "name": "MONO_FONT_14",
                 "type": "font"
+            },
+            {
+                "file": "images/dummy_menu_image",
+                "menuIcon": true,
+                "name": "IMAGES_DUMMY_MENU_IMAGE",
+                "type": "bitmap"
             }
         ]
     },
-    "shortName": "Syokuba",
-    "uuid": "7b8b9607-4a52-47ef-854c-1bb5d979c7c4",
+    "sdkVersion": "3",
+    "shortName": "norikae3",
+    "targetPlatforms": [
+        "aplite",
+        "basalt",
+        "chalk"
+    ],
+    "uuid": "50992cdb-428f-4d4e-8927-47ddd1383d11",
     "versionCode": 1,
-    "versionLabel": "1.0",
+    "versionLabel": "3.0",
     "watchapp": {
+        "hiddenApp": false,
         "watchface": false
     }
 }
